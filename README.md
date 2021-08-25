@@ -35,7 +35,7 @@
     - Dotenv zum Token Speichern → Wozu wird der Token benötigt?
     - Npm Scripts zum Starten und Dev-Starten
     - Was ist der Client?
-    - Simple Ausgabe im Ready Event  (Bot tag & auf wie vielen Guilds er ist)
+    - Simple Ausgabe im Ready Event (Bot tag & auf wie vielen Guilds er ist)
     - Intents → [Guide Link](https://discordjs.guide/popular-topics/intents.html)
 - Häufige Fehler
     - Dateien Speichern sich in Visual Studio Code nicht von selbst → SPEICHERN!
