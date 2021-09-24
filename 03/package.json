@@ -1,15 +1,19 @@
 {
-  "name": "tutorial",
+  "name": "tutorial-01",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "deployCommands": "node src/deploy-commands.js "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.22.0",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0"
   }
