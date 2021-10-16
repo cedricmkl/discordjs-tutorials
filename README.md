@@ -6,4 +6,4 @@ Um den Code zu verwenden, musst du mindestens NodeJS 16 installiert haben! Navig
 
 Viel Spaß, ich hoffe, es kann euch weiterhelfen!
 
-Die Serie ist [hier](https://www.youtube.com/playlist?list=PLZDERUytIKbSxE2RwkW-YK14J9-3QUftk) als Video zu finden!
+Die Tutorials sind [hier](https://www.youtube.com/playlist?list=PLZDERUytIKbSxE2RwkW-YK14J9-3QUftk) zu finden!
