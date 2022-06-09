@@ -1,6 +1,6 @@
 require("dotenv").config() //Dotenv Importieren und die config() Methode ausführen um die .env Datei zu laden
 const fs = require("fs")
-const { Client, Collection } = require("discord.js") //Von Discord.js Client und Collection importieren
+const { Client, Collection, ActivityType } = require("discord.js") //Von Discord.js Client und Collection importieren
 
 const client = new Client({intents:[]}) //Den Client inizialisieren, ohne Intents (Intents Link)
 
@@ -15,14 +15,14 @@ const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWi
 //In die Client.commands Collection als Key den Namen, des Commands setzen und als Value den Command selber
 commandFiles.forEach((commandFile) => {
 	const command = require(`./commands/${commandFile}`);
-	client.commands.set(command.data.name, command);
+	client.commands.set(command.name, command);
 })
 
 client.once("ready", () => { //Einmalig das Ready Event abfangen (Wenn der Bot sich eingeloggt hat) (on um events mehrmals abzufangen)
     //Nachricht, wenn der Bot sich eingeloggt hat ausgeben, die den Tag des Bottes (Name und Discriminator) 
     //und Anzahl der Guilds, wo der Bot drauf ist enthällt
     console.log(`Ready! Logged in as ${client.user.tag}! I'm on ${client.guilds.cache.size} guild(s)!`)
-    client.user.setActivity({name: "mit dem Code", type: "PLAYING"}) //Activity beim starten des Bottes anzeigen
+    client.user.setActivity({name: "mit dem Code", type: ActivityType.Playing}) //Activity beim starten des Bottes anzeigen#
 })
 
 //Das interactionCreate Event abhören und mit einer async function ein Parameter hinzufügen, das wir interafction nennen hinzufügen

@@ -1,13 +1,12 @@
-//Wir importieren SlashCommandBuilder von Discordjs Builders, um damit einfach Slash Commands zu erstellen 
-const { SlashCommandBuilder } = require("@discordjs/builders");
+const { CommandInteraction } = require("discord.js");
 
 //Wir exportieren in unserem File, den Command mit module.exports
 module.exports = {
-	//Wir erstellen den Slash Command
-	data: new SlashCommandBuilder()
-		.setName('ping')
-		.setDescription('Pong!'),
+	name: "test",
 	//Das ist unsere Methode, wo wir unsere Interaction abfangen, diese ist async
+	/**
+	 * @param {CommandInteraction} interaction 
+	 */
 	async execute(interaction) {
 		//Mit Pong antworten
 		await interaction.reply('Pong!');
