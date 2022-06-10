@@ -1,11 +1,11 @@
-const { CommandInteraction } = require("discord.js");
+const { ChatInputCommandInteraction } = require("discord.js");
 
 //Wir exportieren in unserem File, den Command mit module.exports
 module.exports = {
 	name: "test",
 	//Das ist unsere Methode, wo wir unsere Interaction abfangen, diese ist async
 	/**
-	 * @param {CommandInteraction} interaction 
+	 * @param {ChatInputCommandInteraction} interaction 
 	 */
 	async execute(interaction) {
 		//Mit Pong antworten
