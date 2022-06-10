@@ -30,7 +30,7 @@ client.once("ready", () => { //Einmalig das Ready Event abfangen (Wenn der Bot s
 client.on("interactionCreate", async (interaction) => {
 
     //Wenn die Interaction keine SlashCommandInteraction ist returen wir
-    if(!interaction.isCommand()) return
+    if(!interaction.isChatInputCommand()) return
 
     //Wir holen uns aus unserer Commands Collection den Command mit dem Namen, den Wir aus der Interaction bekommen
     const command = client.commands.get(interaction.commandName)

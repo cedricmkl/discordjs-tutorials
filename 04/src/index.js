@@ -10,10 +10,6 @@ client.commands = new Collection()
 
 //Alle Files, die mit der Endung js enden aus dem Ordner commands holen (mit src weil wir nicht von unserem File rekusiv das laden können)
 const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWith('.js')); 
-
-//Die CommandFiles mit einer Schleife durch gehen und die Commands mit require importieren 
-//(dieses mal kein src weil wir den Path vom diesem File aus angeben)
-//In die Client.commands Collection als Key den Namen, des Commands setzen und als Value den Command selber
 commandFiles.forEach((commandFile) => {
 	const command = require(`./commands/${commandFile}`);
 	client.commands.set(command.name, command);

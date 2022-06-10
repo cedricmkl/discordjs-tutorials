@@ -1,0 +1,18 @@
+{
+  "name": "tutorial-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "deployCommands": "node src/deploy-commands.js "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^17.0.41",
+    "discord.js": "^14.0.0-dev.1654733437-3ae2633",
+    "dotenv": "^16.0.1"
+  }
+}
