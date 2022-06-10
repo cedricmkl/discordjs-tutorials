@@ -7,7 +7,9 @@ const commands = [
     new SlashCommandBuilder().setName("info").setDescription("Informationen über Member oder die Guild")
         .addSubcommand(subCommand=> subCommand.setName("guild").setDescription("Informationen über die Guild"))
         .addSubcommand(subCommand=> subCommand.setName("member").setDescription("Informationen über einen Member")
-            .addUserOption(option=> option.setName("member").setDescription("Der Member").setRequired(true)))
+            .addUserOption(option=> option.setName("member").setDescription("Der Member").setRequired(true))),
+    new SlashCommandBuilder().setName("message").setDescription("Sende eine Nachricht als Bot")
+        .addChannelOption(option=> option.setName("channel").setDescription("Der Kanal").setRequired(true))        
 ]
 
 const restClient = new REST({version: "10"}).setToken(process.env.DISCORD_BOT_TOKEN)

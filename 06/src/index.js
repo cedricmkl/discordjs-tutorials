@@ -4,7 +4,7 @@ const { Client, Collection, ActivityType, GatewayIntentBits } = require("discord
 
 const client = new Client({intents:[GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]})
 
-client.commands = new Collection() 
+client.commands = new Collection()
 
 fs.readdirSync('./src/commands')
     .filter(file => file.endsWith('.js'))
